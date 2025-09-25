@@ -1,0 +1,106 @@
+/* ===== Tokens ===== */
+:root{
+  --bg: #f8f5f0;       /* warm ivory */
+  --ink: #1f2937;      /* graphite */
+  --muted: #6b7280;    /* cool gray */
+  --accent: #16a34a;   /* jade green */
+  --card: #ffffff;
+  --line: #e5e7eb;
+  --radius: 12px;
+  --shadow: 0 10px 24px rgba(17,24,39,.06);
+  --wrap: 1080px;
+  --space: clamp(16px, 4vw, 28px);
+}
+
+* { box-sizing: border-box; }
+html,body{ margin:0; padding:0; }
+img{ max-width:100%; height:auto; display:block; }
+
+.site-body{
+  font: 16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color: var(--ink);
+  background: radial-gradient(1200px 600px at 10% -10%, #fff 0, #f7f4ef 40%, #f3efe9 100%);
+}
+
+/* Layout helpers */
+.wrap{ width:min(var(--wrap), 92%); margin-inline:auto; }
+.section{ padding: calc(var(--space) * 1.25) 0; border-top: 1px solid var(--line); }
+.section:first-of-type{ border-top: 0; }
+.section__title{ margin:0 0 12px; font-size: clamp(22px,2.4vw,30px); letter-spacing:-.015em; }
+
+/* Header / hero */
+.site-header{ padding: var(--space) 0 8px; }
+.site-nav{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.site-nav .brand{
+  display:inline-block; width:38px; height:38px; border-radius:50%;
+  background: var(--ink); color:#fff; text-decoration:none;
+  font-weight:700; display:grid; place-items:center;
+}
+.site-nav .links a{ color: var(--ink); text-decoration:none; margin-left:16px; font-weight:600; }
+.site-nav .links a:hover{ color: var(--accent); }
+
+.hero{ text-align:center; padding: clamp(24px, 6vw, 60px) 0; }
+.hero__title{ margin:0 0 6px; font-size: clamp(28px, 4vw, 42px); letter-spacing:-.02em; }
+.hero__subtitle{ margin:0; color: var(--muted); }
+.hero__greeting{ margin:.6rem 0 0; color: var(--accent); font-weight:600; }
+
+/* About */
+.about{ display:grid; grid-template-columns: 1fr; gap:16px; }
+.about__photo{
+  width: 220px; border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.stack{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+.stack__item{
+  background: var(--card); border:1px solid var(--line); padding:8px 12px;
+  border-radius: 999px; font-size:14px;
+}
+
+/* Projects (cards with Flex on wide screens) */
+.tile{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  margin: 14px 0;
+}
+.tile__text h3{ margin:0 0 6px; font-size: clamp(18px,2vw,22px); }
+.tile__text p{ margin:0 0 8px; color: var(--muted); }
+.bullets{ margin:0; padding-left: 18px; }
+.tile__media img{ border-radius: 10px; }
+
+@media (min-width: 760px){
+  .tile{ grid-template-columns: 1.2fr .9fr; align-items: center; }
+}
+
+/* Volunteering list */
+.list{ margin:0; padding-left:18px; }
+
+/* Contact form */
+.contact{
+  display:grid; gap: 10px; max-width: 560px;
+}
+.contact input,.contact textarea{
+  border:1px solid var(--line); border-radius:10px; padding:12px 14px; font:inherit; background:#fff;
+  outline:none; transition: box-shadow .15s ease, border-color .15s ease;
+}
+.contact input:focus, .contact textarea:focus{
+  border-color: var(--accent); box-shadow: 0 0 0 4px rgba(22,163,74,.14);
+}
+.btn{
+  justify-self:start; background: var(--accent); color:#fff; border:0; border-radius:999px;
+  padding:12px 18px; font-weight:600; cursor:pointer; transition: transform .05s, opacity .2s;
+}
+.btn:hover{ opacity:.95; }
+.btn:active{ transform: translateY(1px); }
+.form-msg{ color: var(--accent); min-height: 1.25rem; }
+
+/* Footer */
+.site-footer{ padding: 28px 0 48px; border-top:1px solid var(--line); color: var(--muted); text-align:center; }
+
+/* smooth scroll */
+html{ scroll-behavior: smooth; }
+

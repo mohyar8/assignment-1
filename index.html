@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mohammed Yar — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Mohammed Yar, Computer Science student at KFUPM." />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body class="site-body">
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="site-nav">
+        <a class="brand" href="#top">MY</a>
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section id="top" class="hero">
+        <h1 class="hero__title">Mohammed&nbsp;Yar</h1>
+        <p class="hero__subtitle">Computer Science Student @ KFUPM • Medina, Saudi Arabia</p>
+        <p id="greeting" class="hero__greeting" aria-live="polite"></p>
+        </section>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <!-- About -->
+    <section id="about" class="section wrap">
+      <h2 class="section__title">About Me</h2>
+      <div class="about">
+        <p>
+          I’m a CS student at <strong>KFUPM</strong> with interests across software engineering, AI,
+          and data analysis. I enjoy building practical projects—from AI search agents and
+          Java utilities to Python-based data tooling. I value teamwork, problem solving,
+          and clear, simple design in everything I build.
+        </p>
+        <img class="about__photo" src="./assests/Screenshot 2025-09-25 224759.png" alt="Mohammed Yar" /> 
+      </div>
+
+      <div class="stack">
+        <div class="stack__item">Java</div>
+        <div class="stack__item">Python</div>
+        <div class="stack__item">Figma</div>
+        <div class="stack__item">Problem Solving</div>
+        <div class="stack__item">Teamwork</div>
+        <div class="stack__item">Social Media Marketing</div>
+      </div>
+
+      <div class="edu">
+        <h3>Education</h3>
+        <p><strong>KFUPM</strong> — B.Sc. in Computer Science (Aug 2021 – Present)</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section wrap">
+      <h2 class="section__title">Projects</h2>
+
+      <article class="tile">
+        <div class="tile__text">
+          <h3>AI Search Algorithms</h3>
+          <p>Built search-based AI agents (BFS, DFS, A*) in Python to solve path-finding and decision problems.</p>
+          <ul class="bullets">
+            <li>Implemented reusable search primitives</li>
+            <li>Benchmarked heuristics and branching factors</li>
+            </ul>
+        </div>
+        <div class="tile__media">
+          <img src="./assests/Screenshot 2025-09-25 225213.png" alt="AI Search visualization (placeholder)">
+        </div>
+      </article>
+
+      <article class="tile">
+        <div class="tile__text">
+          <h3>Exploratory Data Analysis</h3>
+          <p>Used pandas, matplotlib, and scikit-learn to analyze real datasets, visualize trends, and try basic models.</p>
+          <ul class="bullets">
+            <li>Data cleaning & EDA dashboards</li>
+            <li>Simple predictive baselines</li>
+          </ul>
+        </div>
+        <div class="tile__media">
+        </div>
+      </article>
+
+      
+
+  
+
+      
+    </section>
+
+    <!-- Volunteering -->
+    <section class="section wrap">
+      <h2 class="section__title">Volunteering</h2>
+      <ul class="list">
+        <li>Event Volunteer — KFUPM Graduation Ceremony (Apr 2025)</li>
+        <li>Event Volunteer — Dhakirat Al-Jabal (Apr 2025)</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section wrap">
+      <h2 class="section__title">Contact</h2>
+      <form class="contact" action="#" method="post" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Say hello…" required></textarea>
+<button type="submit" class="btn">Send Message</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Mohammed Yar</p>
+    </div>
+  </footer>
+</body>
+</html>
